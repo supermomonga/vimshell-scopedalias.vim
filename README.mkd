@@ -10,14 +10,20 @@ This plugin defines scoped aliases by the following configuration.
 
     let g:vimshell_scopedalias#define(
       \ {
-        \ rules: ['.jruby'],
+        \ rules: [{
+          \ file: '.jruby',
+          \ recursive: true
+        \ }],
         \ type: 'filter',
         \ match: '^(gem|rake)',
         \ replace: 'jruby -S $1'
       \ })
     let g:vimshell_scopedalias#define(
       \ {
-        \ rules: ['.jruby'],
+        \ rules: [{
+          \ file: '.jruby',
+          \ recursive: true
+        \ }],
         \ type: 'filter',
         \ match: '^ruby',
         \ replace: 'jruby'
