@@ -4,7 +4,7 @@ It provides scoped-alias defining feature to VimShell.
 
 # Example
 
-If you are using JRuby, you need to add `jruby -S ` prefix to do something like `gem`, `rake`, and others.
+If you are using JRuby, you need to add `jruby -S ` prefix to command something like `gem`, `rake`, and others.
 
 This plugin defines scoped aliases by the following configuration.
 
