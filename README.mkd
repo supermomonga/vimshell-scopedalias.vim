@@ -6,23 +6,25 @@ It provides scoped-alias defining feature to VimShell.
 
 If you are using JRuby, you need to add `jruby -S ` prefix to do something like `gem`, `rake`, and others.
 
-To set following config, this plugin sets scoped aliases.
+This plugin defines scoped aliases by the following configuration.
 
-    let g:vimshell_scopedalias#define('.jruby', [
+    let g:vimshell_scopedalias#define(
       \ {
+        \ rules: ['.jruby'],
         \ type: 'filter',
         \ match: '^(gem|rake)',
         \ replace: 'jruby -S $1'
-      \ },
+      \ })
+    let g:vimshell_scopedalias#define(
       \ {
+        \ rules: ['.jruby'],
         \ type: 'filter',
         \ match: '^ruby',
         \ replace: 'jruby'
-      \ }
-    \ ])
+      \ })
 
 
-Then, in the directories which is contain `.jruby` file, `jruby -s ` prefix isn't necessary to use `gem` and `rake` command, and you can run JRuby with `ruby` command.
+Then, in the directories which rontain `.jruby` file, `jruby -S ` prefix isn't necessary to use `gem` and `rake` command, and you can run JRuby with `ruby` command.
 
 
 
